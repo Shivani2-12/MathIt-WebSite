@@ -1,0 +1,101 @@
+#basicCalculations
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#basicCalculations h2{
+    margin-bottom: 20px;
+    padding: 5px;
+  color: #f8f8ff;
+  font-size: 30px;
+ 
+}
+
+.input-row
+{
+   
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:6px;
+    width:500px;
+    height:35px;
+    margin: 30px;
+}
+.input-row input
+{
+    height:35px;
+    width:150px;
+    background-color: white;
+    border: 0;
+   
+    transition: .4s box-shadow;
+    border-radius: 5px;
+}
+.input-row input:hover
+{
+    box-shadow: 0 0 8px #010B13;
+}
+.input-row  select{
+    
+    height: 35px;
+    background-color: white;
+    color: #010B13;
+    font-size: 17px;
+    
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.input-row select:hover {
+    background-color: #e0ffff;
+    
+}
+
+.button-row
+{
+    display:flex;
+    flex-direction: row;
+ 
+    justify-content: space-between;
+    
+    height: 35px;
+    width:300px;
+    margin-right: 5px;
+    
+}
+.button-row button{
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 5px #010B13;
+    color: #010B13;
+    cursor: pointer;
+
+}
+.button-row button:hover
+{
+background-color: #203a43;
+color:#fff0f5;
+}
+
+
+#result
+{
+    margin-top: 30px;
+   margin-left: 20px;
+   font-size: 20px;
+   padding: 5px;
+   color:#fff0f5;
+}

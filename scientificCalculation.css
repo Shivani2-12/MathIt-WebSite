@@ -1,0 +1,105 @@
+#scientificCalculation
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#scientificCalculation h2
+{
+    margin-left: 30px;
+    margin-bottom: 20px;
+    padding: 5px;
+    color: #f8f8ff;
+    font-size: 30px;
+}
+.sci-input-row
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 5px;
+    width:350px;
+    height:35px;
+    margin: 30px;
+    margin-left: 100px;
+
+}
+.sci-input-row input
+{
+    height:35px;
+    width:150px;
+    background-color: white;
+    border: 0;
+   
+    transition: .4s box-shadow;
+    border-radius: 5px;
+}
+.sci-input-row input:hover
+{
+    box-shadow: 0 0 8px #010B13;
+}
+.sci-input-row select{
+    
+    height: 35px;
+    background-color: white;
+    color: #010B13;
+    font-size: 17px;
+    
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.sci-input-row select:hover {
+    background-color: #e0ffff;
+    
+}
+
+
+.sci-button-row
+{
+    display:flex;
+    flex-direction: row;
+ 
+    justify-content: space-between;
+    padding: 5px;
+    height: 35px;
+    width:250px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    
+}
+.sci-button-row button{
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 5px #010B13;
+    color: #010B13;
+    cursor: pointer;
+
+}
+.sci-button-row button:hover
+{
+    background-color: #203a43;
+    color:#fff0f5;
+}
+#sci-result
+{
+    margin-top: 30px;
+   margin-left: 20px;
+   font-size: 20px;
+   padding: 5px;
+   color:#fff0f5;
+}
+
