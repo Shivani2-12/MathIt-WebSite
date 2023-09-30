@@ -1,0 +1,136 @@
+/* e0ffff- Light canyan , F8F8FF- Ghost white,  */
+body{
+    
+    font-family: sans-serif;
+    display: flex;
+   
+    height:100%;
+    
+
+background: linear-gradient(to left, #2C5364, #203A43, #010B13); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  
+}
+#navigation
+{
+    
+    display:flex;
+    flex-direction: row;
+    height: 3.25rem;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+
+    
+}
+.home
+{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-right:200px;
+}
+
+.navigation-button
+{
+border-radius: 5px;
+padding:10px 30px;
+font-size:18px;
+border: none;
+color: #0F2027 ;
+font-weight: bold;
+cursor: pointer;
+z-index: 1;
+
+background-color: white;
+
+}
+.nav-buttons
+{
+position: relative;
+display: inline-block;
+}
+
+.navigation-button:hover
+{
+    background-color:#010B13;
+    color: white;
+}
+
+.dropdown-option
+{
+    z-index: 1;
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color:white;
+    border-radius:5px;
+    
+}
+
+.nav-buttons:hover .dropdown-option
+{
+    display: block;
+}
+
+.dropdown-option a {
+    display: block;
+    color: #331D2C;
+    text-decoration: none;
+    padding:15px 30px;
+    
+  }
+  .dropdown-option a:hover {
+    color: white;
+    background-color: #010B13;
+    border-radius:5px;
+  }
+
+#homePage
+{
+   
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+#homePage h1{
+    
+  margin-bottom: 20px;
+  padding: 5px;
+  color: white;
+   
+}
+
+.vertical-buttons
+{
+        width: 200px;
+        height: 50px;
+        padding: 6px;
+        margin: 10px;
+        font-size: medium;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        font-size:18px;
+        border: none;
+        color:#010B13;
+        background-color: white;
+        transition:  box-shadow 0.3s ease-in-out;
+}
+.vertical-buttons:hover
+{
+    box-shadow: 7px 7px 10px #010B13;
+   
+}
+
+
+
+

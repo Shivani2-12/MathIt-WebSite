@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathIt</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="basicCalculations.css">
+    <link rel="stylesheet" href="scientificCalculation.css">
+    <link rel="stylesheet" href="BitwiseCalculations.css">
+    <link rel="stylesheet" href="unitConversion.css">
+    <link rel="icon" href="mathit(icon)1.png" type="image/x-icon">
+
+
+</head>
+
+<body>
+<div id="navigation">
+        <a class="home" href="#" onclick="showSection('homePage')">MathIt</a>
+        <div class="nav-buttons">
+        <button class="navigation-button">Calculations</button>
+        <div class="dropdown-option">
+            <a href="#" onclick="showSection('basicCalculations')">Basic Calculations</a>
+            <a href="#" onclick="showSection('BitwiseCalculations')">Bitwise Calculations</a>
+            <a href="#" onclick="showSection('scientificCalculation')">Scientific Calculations</a>
+            <a href="#" onclick="showSection('unitConversion')">Unit Conversions</a>
+        </div>
+    </div>
+    </div>
+   
+    <div id="homePage">
+
+        <h1>Welcome to MathIt</h1>
+        <button class="vertical-buttons" onclick="showSection('basicCalculations')">Basic Calculations</button>
+        <button class="vertical-buttons" onclick="showSection('BitwiseCalculations')">Bitwise Calculations</button>
+        <button class="vertical-buttons" onclick="showSection('scientificCalculation')">Scientific Calculations</button>
+        <button class="vertical-buttons" onclick="showSection('unitConversion')">Unit Conversions</button>
+    </div>
+    
+    
+<!--..................................................................................................................................-->
+<div class="content">     <!--Dynamically changes the inline styles --> 
+<section id="basicCalculations" style="display: none;">
+            <h2>Basic Calculator</h2>
+            <div class="input-row">
+                <input type="number" id="num1" placeholder="Enter number 1">
+                <select id="operation">
+                    <option value="+">Addition (+)</option>
+                    <option value="-">Subtraction (-)</option>
+                    <option value="*">Multiplication (*)</option>
+                    <option value="/">Division (/)</option>
+                    <option value="^">Power (^)</option>
+                </select>
+                <input type="number" id="num2" placeholder="Enter number 2">
+            </div>
+            <div class="button-row">
+                <button onclick="calculateSimple()">Calculate</button>
+                <button onclick="goBack()">Home</button>
+            </div>
+            
+            <div id="result">Result:</div>
+        </section>
+
+    <!--..................................................................................................................................-->
+        <section id="BitwiseCalculations" style="display: none;">
+            <h2>Bitwise Calculator</h2>
+            <div class="bit-input-row">
+            <input type="number" id="bit1" placeholder="Enter Number 1">
+            <select id="bit-operation">
+                <option value="AND">AND</option>
+                <option value="OR">OR</option>
+                <option value="XOR">XOR</option>
+            </select>
+            <input type="number" id="bit2" placeholder="Enter Number 2">
+        </div>
+        <div class="bit-button-row">
+            <button onclick="performBitwise()">Calculate</button>
+            <button onclick="goBack()">Home</button>        
+        </div>
+        <div id="bit-result">Result: </div>
+
+        </section>
+
+    <!--..................................................................................................................................-->
+        <section id="scientificCalculation" style="display: none;">
+            <h2> Scientific Calculator</h2>
+            <div class="sci-input-row">
+                <select id="sci-operation">
+                    <option value="sin">Sin</option>
+                    <option value="cos">Cos</option>
+                    <option value="tan">Tan</option>
+                    <option value="asin">sin⁻¹</option>
+                    <option value="acos">cos⁻¹</option>
+                    <option value="atan">tan⁻¹</option>
+                    <option value="log">log</option>
+                    <option value="sqrt">Square root</option>
+                    <option value="factorial">Factorial(x!)</option>
+                </select>
+            <input type="number" id="number" placeholder="Enter number">
+            
+        </div>
+        <div class="sci-button-row">
+        <button onclick="calculate()">Calculate</button>
+        <button onclick="goBack()">Home</button> </div>
+        <div id="sci-result">Result:</div>
+          
+        </section>
+
+
+<!--..................................................................................................................................-->
+        <section id="unitConversion" style="display: none;">
+            <div class="unit-conversion">
+            <h1>Select the type of Conversion</h1>
+            <div class="Conversion-buttons">
+                <button onclick="showContent('lengthContent')">Length</button>
+                <button onclick="showContent('areaContent')">Area</button>
+                <button onclick="showContent('timeContent')">Time</button>
+                <button onclick="goBack()">Home</button>
+            </div>
+        </div>
+            
+            <!--Empty ContentContainer, for swapping the inner HTML content-->
+            <div id="contentContainer"></div>
+            
+            <!--Length Conversion Content-->
+            <div id="lengthContent" class="unitContent"  style="display: none;">
+                
+                <h2> Length Converter</h2>
+            <!--From length input-->
+
+            <div class="from-length-content">
+                <label for="fromLength">From:</label>
+                <input type="number" id="fromLength" placeholder="Enter Number">
+                <select id="fromLengthUnit">
+                    <option value="m">meters</option>
+                    <option value="cm">centimeters</option>
+                    <option value="ft">feet</option>
+                    <option value="km">Kilometer</option>
+                    <option value="mm">Millimeter</option>
+                    <option value="in">inches</option>
+                    <option value="yd">yard</option>
+                    <option value="mi">Mile</option>
+                    <option value="nmi">Nautical Mile</option>
+                    <option value="micron">Micrometer</option>
+                 </select>
+                </div>
+                
+            
+            <!--Select the to length unit-->
+            <div class="to-length-content">
+                <label for="toLength">To:</label>
+                <select id="toLengthUnit">
+                    <option value="m">meters</option>
+                    <option value="cm">centimeters</option>
+                    <option value="ft">feet</option>
+                    <option value="km">Kilometer</option>
+                    <option value="mm">Millimeter</option>
+                    <option value="in">inches</option>
+                    <option value="yd">yard</option>
+                    <option value="mi">Mile</option>
+                    <option value="nmi">Nautical Mile</option>
+                    <option value="micron">Micrometer</option>
+                </select>
+            </div>
+            <div class="convert-result">
+                <button onclick="convertLength()">Convert</button>
+                <div id="length-result">Result: </div>
+            </div>
+        </div>
+    
+            
+    <div id="areaContent" class="unitContent"  style="display: none;">
+        <div class="Area-Content">
+                <h2> Area Converter</h2>
+            <div class="from-Area-Content">
+                <label for="fromArea">From:</label>
+                <input type="number" id="fromArea" placeholder="Enter Number">
+                <select id="fromAreaUnit">
+                <option value="sqm">square meters</option>
+                <option value="sqft">square feet</option>
+                <option value="acre">acre</option>
+                <option value="hectare">hectare</option>
+                <option value="sqkm">square kilometers</option>
+                <option value="sqmi">square miles</option>
+            
+                </select>
+            </div>
+            <div class="to-Area-Content">
+                <label for="toArea">To:</label>
+                <select id="toAreaUnit">
+                <option value="sqm">square meters</option>
+                <option value="sqft">square feet</option>
+                <option value="acre">acre</option>
+                <option value="hectare">hectare</option>
+                <option value="sqkm">square kilometers</option>
+                <option value="sqmi">square miles</option>
+                </select>
+            </div>
+            <div class="convert-result">
+
+                <button onclick="convertArea()">Convert</button>
+                <div id="area-result">Result: </div>
+            </div>
+            </div>
+        </div>
+            
+        <div id="timeContent" class="unitContent"  style="display: none;">
+            <div class="time-content">
+                <h2> Time Converter</h2>
+            <div class="from-Time-Content">
+                <label for="fromTime">From:</label>
+                <input type="number" id="fromTime" placeholder="Enter Number">
+                <select id="fromTimeUnit">
+                <option value="sec">seconds</option>
+                <option value="min">minutes</option>
+                <option value="hr">hours</option>
+                <option value="day">days</option>
+                <option value="wk">weeks</option>
+                <option value="month">months</option>
+                <option value="yr">years</option>
+                </select>
+            </div>
+            <div class="to-Time-content">
+                <label for="toTime">To:</label>
+                <select id="toTimeUnit">
+                <option value="sec">seconds</option>
+                <option value="min">minutes</option>
+                <option value="hr">hours</option>
+                <option value="day">days</option>
+                <option value="wk">weeks</option>
+                <option value="month">months</option>
+                <option value="yr">years</option>
+                </select>
+            </div>
+            <div class="convert-result">
+                <button onclick="convertTime()">Convert</button>
+                <div id="time-result">Result: </div>
+            </div>
+            </div>
+        </div>
+          </section>
+        <!--..................................................................................................................................-->
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+           // Hide all sections
+            const sections = document.querySelectorAll('.content section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the selected section
+    const sectionToShow = document.getElementById(sectionId);
+    if (sectionToShow) {
+        sectionToShow.style.display = 'flex';
+    }
+
+    // Handle home page separately
+    if (sectionId === 'homePage') {
+        const homePage = document.getElementById('homePage');
+        homePage.style.display = 'flex';
+    } else {
+        const homePage = document.getElementById('homePage');
+        homePage.style.display = 'none';
+    }
+       }
+     
+    </script>
+    <script src="basicCalculations.js"></script>
+    <script src="BitwiseCalculations.js"></script>
+    <script src="scientificCalculation.js"></script>
+    <script src="unitConversion.js"></script>
+</body>
+</html>
